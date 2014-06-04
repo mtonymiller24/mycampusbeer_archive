@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+
+<script language="javascript">
+
+function class_change(obj)
+{
+	var n = obj;
+	if(n.className=="show")
+	{
+		n.className="hidden";
+	}
+	else
+	{
+		n.className="show";
+	}
+}
+</script>
+
+
+<style type="text/css">
+
+.show
+{
+	display:block;
+}
+
+.hidden
+{
+	display:none ;
+}
+
+
+</style>
+
+
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-1">
+	
+	<title>test</title>
+</head>
+
+<body>
+	<form name="search_form"
+			method="post"
+			target="_self"
+			action="test">
+			<input
+				type="hidden"
+				name="ACTION" />
+		<div class="standard-border">
+			Hello World
+			<div>
+				<img style="border:1px solid black;" src="../images/1.jpg" onClick="class_change(document.getElementById('info'))"/>
+				<span id="info" class="hidden">
+					<p>30 or 24 pk</p>
+					<p>18 pk</p>
+					<p>12 pk</p>
+					<p>6 pk</p>
+					<p>1 keg</p>
+				</span>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

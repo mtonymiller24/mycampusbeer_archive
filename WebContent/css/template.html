@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-1">
+	<LINK REL=StyleSheet HREF="home.css" TYPE="text/css" MEDIA=screen>
+	<script language="javascript" type="text/javascript" src="js/functions.js"></script>
+	<!--[if IE]>
+		<style type="text/css">
+		.content li
+		{
+			float: left;
+			height: 100px;
+			width: 250px;
+			margin-right: 6px;
+			list-style: none;
+			padding-bottom: 10px;
+		}
+		</style> 
+	<![endif]-->
+	<title>{$NAME}</title>
+</head>
+<body>
+    <form name="search_form">
+        <div class="header">
+            <img src="../images/CampusBeer_v1_01.jpg" />
+        </div>
+        <div class="search-bar standard-border">
+            <table width="100%" border="0" padding="0" margin="0">
+                <tr>
+                    <td width="65%">
+                        <span class="location-content">
+                        	{$CAMPUS_LOCATION}
+                        </span>
+                    </td>
+                    <td width="35%" align="right">
+                        <span class="search-content">
+                            search
+                            <input type="text" name="SEARCH" size="30" />
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="left-nav">
+	         <div class="upper-left-nav standard-border">
+	             <h3>Filter by:</h3>
+	             <ul>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='SEARCH_LOCATION';document.search_form.submit();">location</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='SEARCH_PRICE';document.search_form.submit();">price</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='SEARCH_BRAND';document.search_form.submit();">brand</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='SEARCH_PRODUCT';document.search_form.submit();">product</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='SEARCH_SPECIAL';document.search_form.submit();">specials</a>
+	                 </li>
+	             </ul>
+	             <h3>
+	             	<a href="javascript:document.search_form['ACTION'].value='PAGE_ADVANCED_SEARCH';document.search_form.submit();">Custom Search</a>
+	             </h3>
+	         </div>
+	         <div class="mid-left-nav standard-border">
+	             <h3>Manage</h3>
+	             <ul>
+	             	<li>
+	             		<a href="javascript:document.search_form['ACTION'].value='ADD_CAMPUS';document.search_form.submit();">Add Campus</a>
+	             	</li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='ADD_STORE';document.search_form.submit();">Add Store</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='MANAGE_PRICES';document.search_form.submit();">Manage Prices</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='REMOVE_ITEM';document.search_form.submit();">Remove Item</a>
+	                 </li>
+	             </ul>
+	         </div>
+	         <div class="lower-left-nav standard-border">
+	         	{$LOGIN}
+	         </div>
+	 	</div>
+        <div class="center standard-border">
+        	{$CONTENT}               
+        </div>
+        
+        <div class="footer standard-border">
+            <a href="mailto:mycampusbeer@gmail.com">Contact Us</a> &#xA0;&#xA0;|&#xA0;&#xA0; Admin &#xA0;&#xA0;|&#xA0;&#xA0; <span style="cursor: pointer;" onClick="javascript:hide_show(document.getElementById('legal'));">Legal</span> &#xA0;&#xA0;|&#xA0;&#xA0; <a href="mailto:suggestions.mycampusbeer@gmail.com">Suggestions</a>
+        </div>
+        <div id="legal" class="hidden">
+        	<div class="close-legal" onClick="javascript:hide_show(document.getElementById('legal'));">Close</div> 
+        	<h2>Legal Information</h2>
+        	<hr/>
+			<p>Mycampusbeer.com is in NO WAY affiliated with any college, university, seminary, or educational institution; such establishments’ names are used as a sole purpose for locating neighboring businesses.</p>
+			<p>Mycampusbeer.com does not promote the use of alcohol in anyway, shape, or form. This website is created as a means of providing product and price information to the consumer body and in no way glorifies or condones the use of alcohol.</p>
+			<p>Mycampusbeer.com does not represent or claim to be a part of any businesses listed on this site. Products and prices will vary often and product selection is much larger than what is advertised on this website. </p>
+			<p>Mycampusbeer.com reserves the right to, at anytime and without notice, modify or discontinue this website and its services. We have no accountability or reliability for the removal or improper delivery of any information on this website.</p>				
+			<p>Mycampusbeer.com shall not be held liable or responsible for any relations, exchanges, connections, deals, payments, or other forms of communiqué’ between consumers and businesses on this website.</p>
+        </div>
+        <div id="login" class="hidden">
+        	<div class="close-login" onClick="javascript:hide_show(document.getElementById('legal'));">Close</div> 
+        	<h2>Login</h2>
+        	<hr/>
+			<div>
+				Email
+				<input type="text" name="USER_ID" size="6"/>
+			</div>
+			<div>
+				Password
+				<input type="text" name="PASSWORD" size="6"/>
+			</div>
+        </div>
+    </form>
+</body>
+</html>

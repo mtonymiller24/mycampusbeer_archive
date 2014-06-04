@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="test.xsl"?>
+<data>
+	<campus>
+		<id>1</id>
+		<name>UofI</name>
+		<city>Urbana/Champaign</city>
+		<store>
+			<id>1</id>
+			<campusId>1</campusId>
+			<name>Discount Den</name>
+			<city>Champaign</city>
+			<address>111 Sixth Street</address>
+			<phone>217-555-6677</phone>
+			<zip>61820</zip>
+		</store>
+		<store>
+			<id>2</id>
+			<campusId>1</campusId>
+			<name>Colonial Pantry</name>
+			<city>Champaign</city>
+			<address>405 Green Street</address>
+			<phone>217-555-6887</phone>
+			<zip>61820</zip>
+		</store>
+		<store>
+			<id>3</id>
+			<campusId>1</campusId>
+			<name>Picodillis</name>
+			<city>Champaign</city>
+			<address>105 First Street</address>
+			<phone>217-555-7788</phone>
+			<zip>61820</zip>
+		</store>
+	</campus>
+	
+	
+	
+	<brand>
+		<id>1</id>
+		<name>Miller</name>
+		<type>beer</type>
+		<product>
+			<id>1</id>
+			<brandId>1</brandId>
+			<name>Miller Lite</name>
+			<brandName>Miller</brandName>
+			<type>beer</type>
+		</product>
+		<product>
+			<id>7</id>
+			<brandId>1</brandId>
+			<name>MGD</name>
+			<brandName>Miller</brandName>
+			<type>beer</type>
+		</product>
+	</brand>
+	<brand>
+		<id>2</id>
+		<name>Budweiser</name>
+		<type>beer</type>
+		<product>
+			<id>2</id>
+			<brandId>2</brandId>
+			<name>Bud Lite</name>
+			<brandName>Budweiser</brandName>
+			<type>beer</type>
+		</product>
+	</brand>
+	<brand>
+		<id>3</id>
+		<name>Coors</name>
+		<type>beer</type>
+		<product>
+			<id>3</id>
+			<brandId>3</brandId>
+			<name>Coors Lite</name>
+			<brandName>Coors</brandName>
+			<type>beer</type>
+		</product>
+	</brand>
+	<brand>
+		<id>4</id>
+		<name>Keystone</name>
+		<type>beer</type>
+		<product>
+			<id>4</id>
+			<brandId>4</brandId>
+			<name>Keystone Lite</name>
+			<brandName>Keystone</brandName>
+			<type>beer</type>
+		</product>
+	</brand>
+	<brand>
+		<id>5</id>
+		<name>Icehouse</name>
+		<type>beer</type>
+	</brand>
+	<brand>
+		<id>9</id>
+		<name>Smirnoff</name>
+		<type>liqour</type>
+	</brand>
+	
+	<item>
+		<id>1</id>
+		<storeId>1</storeId>
+		<storeName>Discount Den</storeName>
+		<campusId>1</campusId>
+		<name>Miller Lite</name>
+		<price>1399</price>
+		<priceDisplay>$13.99</priceDisplay>
+		<brandId>1</brandId>
+		<productId>1</productId>
+		<container>cans</container>
+		<quantity>24</quantity>
+		<special>false</special>
+		<flagged>false</flagged>
+	</item>
+	
+	<quantity>30</quantity>
+	<quantity>24</quantity>
+	<quantity>18</quantity>
+	<quantity>12</quantity>
+	<quantity>6</quantity>
+	<quantity>4</quantity>
+	<quantity>1</quantity>
+	
+</data>

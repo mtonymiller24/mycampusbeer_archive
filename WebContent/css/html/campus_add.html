@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-1">
+	<LINK REL=StyleSheet HREF="home.css" TYPE="text/css" MEDIA=screen>
+	<script language="javascript" type="text/javascript" src="functions.js"></script>
+	
+	<!--[if IE]>
+		<style type="text/css">
+		.content li
+		{
+			float: left;
+			height: 100px;
+			width: 250px;
+			margin-right: 6px;
+			list-style: none;
+			padding-bottom: 10px;
+		}
+		</style> 
+	<![endif]-->
+	<title>Mycampusbeer.com</title>
+</head>
+<body>
+    <form name="search_form">
+        <div class="header">
+            <img src="../images/CampusBeer_v1_01.jpg" />
+        </div>
+        <div class="search-bar standard-border">
+            <table width="100%" border="0" padding="0" margin="0">
+                <tr>
+                    <td width="65%">
+                        <span class="location-content">
+                            Campus Location &#xA0; &gt;&gt; &#xA0; Illinois &#xA0; &gt;&gt; &#xA0; UIUC
+                        </span>
+                    </td>
+                    <td width="35%" align="right">
+                        <span class="search-content">
+                            search
+                            <input type="text" name="SEARCH" size="30" />
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="left-nav">
+	         <div class="upper-left-nav standard-border">
+	             <h3>Filter by:</h3>
+	             <ul>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='SEARCH_LOCATION';document.search_form.submit();">location</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='SEARCH_PRICE';document.search_form.submit();">price</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='SEARCH_BRAND';document.search_form.submit();">brand</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='SEARCH_PRODUCT';document.search_form.submit();">product</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='SEARCH_SPECIAL';document.search_form.submit();">specials</a>
+	                 </li>
+	             </ul>
+	             <h3>
+	             	<a href="javascript:document.search_form['ACTION'].value='PAGE_ADVANCED_SEARCH';document.search_form.submit();">Custom Search</a>
+	             </h3>
+	         </div>
+	         <div class="lower-left-nav standard-border">
+	             <h3>Manage</h3>
+	             <ul>
+	             	<li>
+	             		<a href="javascript:document.search_form['ACTION'].value='ADD_CAMPUS';document.search_form.submit();">Add Campus</a>
+	             	</li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='ADD_STORE';document.search_form.submit();">Add Store</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='MANAGE_PRICES';document.search_form.submit();">Manage Prices</a>
+	                 </li>
+	                 <li>
+	                 	<a href="javascript:document.search_form['ACTION'].value='REMOVE_ITEM';document.search_form.submit();">Remove Item</a>
+	                 </li>
+	             </ul>
+	         </div>
+	 	</div>
+		<div class="center standard-border">
+			<div class="content">
+				<h2>Add Campus</h2>
+			
+               <p class="content-label">State</p>
+               <p class="content-option">
+               		<xsl:value-of select="/data/campus/stateId" />
+               </p>
+            
+               <p class="content-label">Campus Name</p>
+               <p class="content-option">
+               		<input type="text" name="NAME" size="30" value="{/data/campus/name}">
+               </p>
+           
+               <p class="content-label">City</p>
+               <p class="content-option">
+               		<input type="text" name="CITY" size="30" value="{/data/campus/city}">
+               </p>
+            
+               <p class="content-label">Zip</p>
+               <p class="content-option">
+               		<input type="text" name="ZIP" size="6" value="{/data/campus/zip}">
+               </p>
+               
+               <div class="submit-button">
+	               <p class="content-option">
+		           		<input type="Submit" name="SUBMIT" value="Submit"/>
+		           </p>
+	           </div>
+         	</div>
+        </div>
+        
+        <div class="footer standard-border">
+            Contact Us &#xA0;&#xA0;|&#xA0;&#xA0; Admin &#xA0;&#xA0;|&#xA0;&#xA0; Legal &#xA0;&#xA0;|&#xA0;&#xA0; Suggestions
+        </div>
+    </form>
+</body>
+</html>

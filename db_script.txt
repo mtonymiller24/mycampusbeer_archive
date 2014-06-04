@@ -1,0 +1,101 @@
+CREATE SEQUENCE campus_id_seq 
+INCREMENT BY 1
+MINVALUE 1
+START WITH 1
+;
+
+CREATE TABLE campus (
+id integer NOT NULL default nextval('campus_id_seq') PRIMARY KEY,
+name varchar,
+state varchar,
+city varchar,
+zip integer
+);
+
+
+
+
+CREATE SEQUENCE store_id_seq 
+INCREMENT BY 1
+MINVALUE 1
+START WITH 1
+;
+
+CREATE TABLE store (
+id integer NOT NULL default nextval('store_id_seq') PRIMARY KEY,
+campus_id integer NOT NULL,
+name varchar,
+city varchar,
+address varchar,
+phone varchar,
+zip integer
+);
+
+ALTER TABLE store ADD CONSTRAINT "fk_campus_id" FOREIGN KEY (campus_id) REFERENCES campus(id) ON DELETE CASCADE;
+
+
+
+CREATE SEQUENCE item_id_seq 
+INCREMENT BY 1
+MINVALUE 1
+START WITH 1
+;
+
+CREATE TABLE item (
+id integer NOT NULL default nextval('item_id_seq') PRIMARY KEY,
+store_id integer NOT NULL,
+campus_id integer NOT NULL,
+product_id integer,
+price integer,
+quantity integer,
+store_name varchar,
+name varchar,
+brand varchar,
+type varchar,
+container varchar,
+edited_timestamp TIMESTAMP WITHOUT TIME ZONE,
+is_flagged boolean,
+is_popular boolean,
+is_static_price boolean,
+is_special boolean,
+special_start  TIMESTAMP WITHOUT TIME ZONE,
+special_stop  TIMESTAMP WITHOUT TIME ZONE,
+special_price integer,
+submitter_id varchar
+);
+
+ALTER TABLE item ADD CONSTRAINT "fk_campus_id" FOREIGN KEY (campus_id) REFERENCES campus(id) ON DELETE CASCADE;
+ALTER TABLE item ADD CONSTRAINT "fk_store_id" FOREIGN KEY (store_id) REFERENCES store(id) ON DELETE CASCADE;
+
+
+
+CREATE SEQUENCE brand_id_seq 
+INCREMENT BY 1
+MINVALUE 1
+START WITH 1
+;
+
+CREATE TABLE brand (
+id integer NOT NULL default nextval('brand_id_seq') PRIMARY KEY,
+name varchar,
+type varchar
+);
+
+
+
+CREATE SEQUENCE product_id_seq 
+INCREMENT BY 1
+MINVALUE 1
+START WITH 1
+;
+
+CREATE TABLE product (
+id integer NOT NULL default nextval('product_id_seq') PRIMARY KEY,
+brand_id integer NOT NULL,
+brand_name varchar,
+name varchar,
+type varchar,
+is_popular boolean
+);
+
+ALTER TABLE product ADD CONSTRAINT "fk_brand_id" FOREIGN KEY (brand_id) REFERENCES brand(id);

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="test.xsl"?>
+<data>
+	<campus>
+		<id>1</id>
+		<name>UofI</name>
+		<city>Urbana/Champaign</city>
+	</campus>
+	
+	<store>
+		<id>1</id>
+		<campusId>1</campusId>
+		<name>Discount Den</name>
+		<city>Champaign</city>
+		<address>111 Sixth Street</address>
+		<phone>217-555-6677</phone>
+		<zip>61820</zip>
+	</store>
+	<store>
+		<id>2</id>
+		<campusId>1</campusId>
+		<name>Colonial Pantry</name>
+		<city>Champaign</city>
+		<address>405 Green Street</address>
+		<phone>217-555-6887</phone>
+		<zip>61820</zip>
+	</store>
+	<store>
+		<id>3</id>
+		<campusId>1</campusId>
+		<name>Picodillis</name>
+		<city>Champaign</city>
+		<address>105 First Street</address>
+		<phone>217-555-7788</phone>
+		<zip>61820</zip>
+	</store>
+	
+	<brand>
+		<id>1</id>
+		<name>Miller</name>
+		<type>beer</type>
+	</brand>
+	<brand>
+		<id>2</id>
+		<name>Budweiser</name>
+		<type>beer</type>
+	</brand>
+	<brand>
+		<id>3</id>
+		<name>Coors</name>
+		<type>beer</type>
+	</brand>
+	<brand>
+		<id>4</id>
+		<name>Keystone</name>
+		<type>beer</type>
+	</brand>
+	<brand>
+		<id>5</id>
+		<name>Icehouse</name>
+		<type>beer</type>
+	</brand>
+	<brand>
+		<id>9</id>
+		<name>Smirnoff</name>
+		<type>liqour</type>
+	</brand>
+	
+	<product>
+		<id>1</id>
+		<brandId>1</brandId>
+		<name>Miller Lite</name>
+		<brandName>Miller</brandName>
+		<type>beer</type>
+	</product>
+	<product>
+		<id>2</id>
+		<brandId>2</brandId>
+		<name>Bud Lite</name>
+		<brandName>Budweiser</brandName>
+		<type>beer</type>
+	</product>
+	<product>
+		<id>3</id>
+		<brandId>3</brandId>
+		<name>Coors Lite</name>
+		<brandName>Coors</brandName>
+		<type>beer</type>
+	</product>
+	<product>
+		<id>4</id>
+		<brandId>4</brandId>
+		<name>Keystone Lite</name>
+		<brandName>Keystone</brandName>
+		<type>beer</type>
+	</product>
+	<product>
+		<id>7</id>
+		<brandId>1</brandId>
+		<name>MGD</name>
+		<brandName>Miller</brandName>
+		<type>beer</type>
+	</product>
+	
+	<item>
+		<id>1</id>
+		<storeId>1</storeId>
+		<storeName>Discount Den</storeName>
+		<campusId>1</campusId>
+		<name>Miller Lite</name>
+		<price>1399</price>
+		<priceDisplay>$13.99</priceDisplay>
+		<brandId>1</brandId>
+		<productId>1</productId>
+		<container>cans</container>
+		<quantity>24</quantity>
+		<special>false</special>
+		<flagged>false</flagged>
+	</item>
+	<item>
+		<id>2</id>
+		<storeId>2</storeId>
+		<storeName>Colonial Pantry</storeName>
+		<campusId>1</campusId>
+		<name>Bud Lite</name>
+		<price>1299</price>
+		<priceDisplay>$12.99</priceDisplay>
+		<brandId>2</brandId>
+		<productId>2</productId>
+		<container>cans</container>
+		<quantity>24</quantity>
+		<special>false</special>
+		<flagged>false</flagged>
+	</item>
+	<item>
+		<id>3</id>
+		<storeId>1</storeId>
+		<storeName>Discount Den</storeName>
+		<campusId>1</campusId>
+		<name>Coors Lite</name>
+		<price>1349</price>
+		<priceDisplay>$13.49</priceDisplay>
+		<brandId>3</brandId>
+		<productId>3</productId>
+		<container>cans</container>
+		<quantity>24</quantity>
+		<special>false</special>
+		<flagged>true</flagged>
+	</item>
+	<item>
+		<id>4</id>
+		<storeId>3</storeId>
+		<storeName>Picodillis</storeName>
+		<campusId>1</campusId>
+		<name>Keystone Lt.</name>
+		<price>1199</price>
+		<priceDisplay>$11.99</priceDisplay>
+		<brandId>4</brandId>
+		<productId>4</productId>
+		<container>cans</container>
+		<quantity>30</quantity>
+		<special>true</special>
+		<specialPrice>1099</specialPrice>
+		<specialPriceDisplay>$10.99</specialPriceDisplay>
+		<specialStart>11/20</specialStart>
+		<specialStop>11/31</specialStop>
+		<flagged>false</flagged>
+	</item>
+	<item>
+		<id>5</id>
+		<storeId>3</storeId>
+		<storeName>Picodillis</storeName>
+		<campusId>1</campusId>
+		<name>Icehouse</name>
+		<price>1599</price>
+		<priceDisplay>$15.99</priceDisplay>
+		<brandId>5</brandId>
+		<productId>5</productId>
+		<container>cans</container>
+		<quantity>30</quantity>
+		<special>false</special>
+		<flagged>false</flagged>
+	</item>
+	<item>
+		<id>6</id>
+		<storeId>1</storeId>
+		<storeName>Discount Den</storeName>
+		<campusId>1</campusId>
+		<name>Pabst Blue Ribbon</name>
+		<price>1499</price>
+		<priceDisplay>$14.99</priceDisplay>
+		<brandId>6</brandId>
+		<productId>6</productId>
+		<container>cans</container>
+		<quantity>30</quantity>
+		<special>false</special>
+		<flagged>false</flagged>
+	</item>
+	<item>
+		<id>7</id>
+		<storeId>1</storeId>
+		<storeName>Discount Den</storeName>
+		<campusId>1</campusId>
+		<name>MGD</name>
+		<price>1349</price>
+		<priceDisplay>$13.49</priceDisplay>
+		<brandId>1</brandId>
+		<productId>7</productId>
+		<container>cans</container>
+		<quantity>24</quantity>
+		<special>false</special>
+		<flagged>false</flagged>
+	</item>
+	<item>
+		<id>8</id>
+		<storeId>3</storeId>
+		<storeName>Picodillis</storeName>
+		<campusId>1</campusId>
+		<name>Budweiser</name>
+		<price>1349</price>
+		<priceDisplay>$13.49</priceDisplay>
+		<brandId>2</brandId>
+		<productId>8</productId>
+		<container>cans</container>
+		<quantity>24</quantity>
+		<special>false</special>
+		<flagged>false</flagged>
+	</item>
+</data>
